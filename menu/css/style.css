@@ -56,7 +56,7 @@ a {
 
 /* =============|BUTTONS|============= */
 
-.button__prime {
+.button {
   background-color: var(--main-color);
   color: var(--light-color);
   border: none;
@@ -86,11 +86,16 @@ a {
 
 .logo {
   max-width: 200px;
+}
+
+.header__logo {
   align-self: flex-start;
   margin-right: auto;
 }
 
 .menu--overlay {
+  position: absolute;
+  float: left;
   opacity: 0;
   transition: 0.2s;
 }
@@ -109,12 +114,16 @@ a {
 .menu__logo {
   margin: 0 auto;
   opacity: 0.2;
+  transition: 0.5s;
+}
+
+.menu__logo:hover {
+  opacity: 1;
 }
 
 .menu {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   gap: 20px;
   flex-grow: 1;
 }
@@ -150,10 +159,6 @@ a {
 .lang-switcher__flag {
   width: 20px;
   height: 12px;
-}
-
-.lang-switcher.pc-only {
-  margin-left: auto;
 }
 
 .phone {
@@ -243,10 +248,6 @@ a {
   }
 
   .menu {
-    justify-content: flex-end;
-  }
-
-  .menu {
     position: fixed;
     left: 0;
     top: 0;
@@ -258,7 +259,7 @@ a {
     /* width: 80%; */
     height: 100%;
     transform: translateX(-100%);
-    transition: 0.3s ease-in-out;
+    transition: 0.2s ease-in-out;
     z-index: 99;
   }
 
@@ -274,11 +275,11 @@ a {
 }
 
 @media (max-width: 767px) {
-  .logo {
+  .header__logo {
     max-width: 110px;
   }
 
-  .pc-only {
+  .desktop-only {
     display: none;
   }
 
