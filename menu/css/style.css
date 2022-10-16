@@ -106,7 +106,7 @@ a {
   opacity: 1;
 }
 
-.menu-logo {
+.menu__logo {
   margin: 0 auto;
   opacity: 0.2;
 }
@@ -251,11 +251,11 @@ a {
     left: 0;
     top: 0;
     background: url(../img/bg.png), linear-gradient(var(--dark-color), var(--dark-color));
-    padding: 50px 35px;
+    padding: 35px;
     flex-direction: column;
     justify-content: flex-start;
     gap: 40px;
-    width: 80%;
+    /* width: 80%; */
     height: 100%;
     transform: translateX(-100%);
     transition: 0.3s ease-in-out;
@@ -284,6 +284,9 @@ a {
 
   .phone {
     align-self: flex-end;
+  }
+  .menu {
+    padding-top: 20px;
   }
 }
 
