@@ -8,6 +8,25 @@
 
 html {
   box-sizing: border-box;
+
+  /* Scrolbar */
+
+  scrollbar-width: 10px;
+  scrollbar-color: var(--dark-color);
+}
+
+html::-webkit-scrollbar {
+  width: 10px;
+}
+
+html::-webkit-scrollbar-track {
+  background: var(--light-color);
+}
+
+html::-webkit-scrollbar-thumb {
+  background: url(../img/bg.png), linear-gradient(var(--dark-color), var(--dark-color));
+  border-radius: 20px;
+  border: none;
 }
 
 *,
@@ -78,7 +97,7 @@ a {
   align-items: center;
   justify-content: space-between;
   flex-grow: 1;
-  gap: 24px;
+  gap: 20px;
   padding-top: 30px;
   padding-bottom: 30px;
   color: var(--light-color);
@@ -140,12 +159,8 @@ a {
   text-decoration: none;
 }
 
-.menu__link.current-page {
-  color: var(--light-accent-color);
-  border-bottom: 3px solid var(--light-accent-color);
-}
-
-.menu__link:hover {
+.menu__link:hover,
+.menu__link.menu--current-page {
   color: var(--light-accent-color);
   border-bottom: 3px solid var(--light-accent-color);
 }
@@ -161,14 +176,16 @@ a {
   height: 12px;
 }
 
-.phone {
+.phone,
+.location {
   display: flex;
   align-items: center;
   gap: 10px;
   flex-shrink: 0;
 }
 
-.phone__icon {
+.phone__icon,
+.location__icon {
   width: 20px;
   height: 20px;
   fill: #d4c3b7;
@@ -238,6 +255,58 @@ a {
   display: none;
 }
 
+/* =============|FOOTER|============= */
+
+.footer {
+  padding-top: 55px;
+  background-image: url(../img/footer-bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  color: var(--light-color);
+  height: 500px;
+}
+
+.footer__inner {
+  display: grid;
+  justify-content: space-between;
+  gap: 40px;
+  grid-template-areas: 'logo menu btn contacts';
+  margin-bottom: 50px;
+}
+
+.footer__menu {
+  flex-wrap: wrap;
+  grid-area: menu;
+}
+
+.footer__logo {
+  grid-area: logo;
+}
+
+.footer__btn {
+  grid-area: btn;
+}
+
+.contacts {
+  display: grid;
+  gap: 20px;
+  font-style: normal;
+  flex-shrink: 0;
+}
+
+.footer__contacts {
+  grid-area: contacts;
+  justify-self: center;
+}
+
+.copy {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+/* =============|MEDIA|============= */
+
 @media (max-width: 1100px) {
   .mobile-only {
     display: flex;
@@ -247,7 +316,7 @@ a {
     display: block;
   }
 
-  .menu {
+  .menu--mobile {
     position: fixed;
     left: 0;
     top: 0;
@@ -261,16 +330,39 @@ a {
     transform: translateX(-100%);
     transition: 0.2s ease-in-out;
     z-index: 99;
+    overflow: auto;
   }
 
   .menu--visible {
     transform: none;
   }
 
-  .menu__list {
+  .menu__list--mobile {
     z-index: 10;
     flex-direction: column;
     align-items: flex-start;
+  }
+
+  .footer__inner {
+    grid-template-areas:
+      'logo menu . contacts'
+      '. . . btn';
+  }
+}
+
+@media (max-width: 960px) {
+  .footer__inner {
+    grid-template-areas:
+      'logo . . contacts'
+      'menu . . btn';
+  }
+
+  .footer__menu-list {
+    flex-direction: column;
+  }
+
+  .footer__btn {
+    align-self: center;
   }
 }
 
@@ -283,22 +375,40 @@ a {
     display: none;
   }
 
-  .phone {
-    align-self: flex-end;
-  }
-  .menu {
+  .menu--mobile {
     padding-top: 20px;
+  }
+
+  .footer__inner {
+    grid-template-areas:
+      'logo contacts'
+      'menu btn';
   }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 480px) {
   .header__inner {
     gap: 10px;
   }
 
-  .phone {
+  .header__phone--mobile {
     align-self: flex-end;
     font-size: 14px;
+  }
+
+  .footer__inner {
+    gap: 20px;
+    grid-template-areas:
+      'logo contacts'
+      'menu menu'
+      'btn btn';
+  }
+  .footer__logo {
+    align-self: center;
+  }
+
+  .footer__menu-list {
+    gap: 10px;
   }
 }
 
@@ -307,10 +417,6 @@ a {
 h1 {
   color: var(--dark-color);
   font-size: 48px;
-}
-
-p {
-  margin-bottom: 25px;
 }
 
 .service {
@@ -355,17 +461,4 @@ p {
 .service__content--title {
   padding-bottom: 25px;
   margin-bottom: 25px;
-}
-
-.footer {
-  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(../img/panorama-g50f10aafc_1920.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center center;
-  padding-bottom: 375px;
-}
-
-.copy {
-  color: var(--light-color);
-  font-weight: 700;
 }
