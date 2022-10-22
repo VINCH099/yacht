@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="ru" class="lock">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -11,10 +11,18 @@
       href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
       rel="stylesheet"
     />
+
+    <link rel="stylesheet" href="/css/swiper.min.css" />
+
     <link rel="stylesheet" href="css/style.css" />
-    <script defer src="js/main.js"></script>
   </head>
   <body>
+    <div id="pre">
+      <div class="pl">
+        <span class="pl__sr">Loading…</span>
+      </div>
+    </div>
+
     <header class="header">
       <div class="header__inner container">
         <button class="menu__burger">
@@ -31,10 +39,10 @@
           </a>
           <ul class="menu__list menu__list--mobile">
             <li class="menu__item">
-              <a class="menu__link" href="#">Наши яхты</a>
+              <a class="menu__link" href="/yachts.html">Наши яхты</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link menu--current-page" href="#">Дополнительные услуги</a>
+              <a class="menu__link" href="/services.html">Дополнительные услуги</a>
             </li>
             <li class="menu__item">
               <a class="menu__link" href="#">Контакты</a>
@@ -47,7 +55,7 @@
           </div>
         </nav>
 
-        <i class="menu--overlay"></i>
+        <i class="_overlay"></i>
 
         <div class="lang-switcher desktop-only">
           <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
@@ -60,12 +68,631 @@
           <svg class="phone__icon">
             <use xlink:href="img\sprite.svg#icon-phone"></use>
           </svg>
-          <a class="phone__text" href="tel:+123456789">+971 21 123 2234</a>
+          <a class="phone__text" href="tel:+123456789">+971 55 552 1519</a>
         </div>
       </div>
     </header>
 
-    <main style="height: 50vh"></main>
+    <main class="main">
+      <section class="hero">
+        <div class="">
+          <div class="hero__content container">
+            <h1 class="main__title hero__title">
+              Аренда яхт VIP класса в Дубае
+              <span class="hero__title-location location__text">
+                <svg class="location__icon">
+                  <use xlink:href="img\sprite.svg#icon-location"></use>
+                </svg>
+                DUBAI, DUBAI MARINA</span
+              >
+            </h1>
+            <p>Мы знаем, как сделать так, чтобы Ваше путешествие на яхте стало незабываемым.</p>
+            <p>Гарантируем лучший выбор яхт.</p>
+          </div>
+        </div>
+      </section>
+      <div class="home-inner">
+        <div class="container">
+          <div class="home__filters">
+            <div class="filters">
+              <span class="filters__mobile-title mobile-only">
+                <svg class="filters__mobile-icon">
+                  <use xlink:href="img\sprite.svg#icon-sort"></use>
+                </svg>
+                Сортировка
+                <svg class="filters__mobile-icon--close">
+                  <use xlink:href="img\sprite.svg#icon-close"></use>
+                </svg>
+              </span>
+              <label>
+                Сортировка
+                <div class="select-wrapper">
+                  <select name="popularity" id="">
+                    <option value="1">По популярности</option>
+                    <option value="2">По рейтингу</option>
+                    <option value="3">По возрастанию цены</option>
+                    <option value="4">По убыванию цены</option>
+                  </select>
+                </div>
+              </label>
+              <label>
+                Размер яхты
+                <div class="select-wrapper">
+                  <select name="size" id="">
+                    <option value="1">Все размеры</option>
+                    <option value="2">Сначала маленькие</option>
+                    <option value="3">Сначала большие</option>
+                  </select>
+                </div>
+              </label>
+              <label>
+                Кол-во кают
+                <div class="select-wrapper">
+                  <select name="cabin" id="">
+                    <option value="1">Все</option>
+                    <option value="2">4</option>
+                    <option value="3">5</option>
+                    <option value="4">6</option>
+                    <option value="5">7</option>
+                    <option value="6">8</option>
+                  </select>
+                </div>
+              </label>
+              <label>
+                Кол-во людей
+                <div class="select-wrapper">
+                  <select name="people" id="">
+                    <option value="1">1 - 12</option>
+                    <option value="2">1</option>
+                    <option value="2">2</option>
+                    <option value="2">3</option>
+                    <option value="2">4</option>
+                    <option value="3">5</option>
+                    <option value="4">6</option>
+                    <option value="5">7</option>
+                    <option value="6">8</option>
+                    <option value="7">8</option>
+                    <option value="8">8</option>
+                    <option value="9">8</option>
+                    <option value="10">8</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                  </select>
+                </div>
+              </label>
+              <button class="button mobile-only filters__mobile--btn">Показать</button>
+            </div>
+
+            <button class="button-sort mobile-only">
+              <svg class="button-sort__icon">
+                <use xlink:href="img\sprite.svg#icon-sort"></use>
+              </svg>
+              Сортировка
+            </button>
+            <a href="#add-service" class="button button-add">
+              <svg class="button-add__icon">
+                <use xlink:href="img\sprite.svg#icon-add"></use>
+              </svg>
+              <span class="desktop-only--add">Дополнительные услуги</span>
+              <span class="mobile-only">Доп.услуги</span>
+            </a>
+          </div>
+          <ul class="catalog">
+            <li class="catalog__item">
+              <div class="product">
+                <h2 class="product__title">
+                  Sunseeker
+                  <span class="product__title--model">64 FT</span>
+                </h2>
+
+                <div class="product__info">
+                  <img class="product__brand-img" src="./img/sunseeker-logo-vector.png" alt="" />
+                  <ul class="meta product__meta">
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-group"></use>
+                      </svg>
+                      - <span class="meta__info-text">12</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-bed"></use>
+                      </svg>
+                      - <span class="meta__info-text">4</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-drink"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <p class="product__price">1300AED + VAT %</p>
+
+                <div class="product__buttons">
+                  <button class="button button--accent">Выбрать дату и зарезервировать</button>
+                  <a class="button" href="/post.html">Подробнее о яхте</a>
+                </div>
+                <p class="product__text">
+                  Барбекю, безалкогольные напитки, вода и лед, и еще какие-то важные моменты о яхте, небольшое описание
+                  основных достоинств и того что включено
+                </p>
+
+                <div class="product__slider">
+                  <div class="swiper product-slider__main">
+                    <ul class="swiper-wrapper">
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/post-slider-yacht-01.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/boat-gc1d645525_1280.jpg" />
+                      </li>
+
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-5.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-4.jpg" />
+                      </li>
+                    </ul>
+
+                    <div class="swiper product-slider__thumb">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/post-slider-yacht-01.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/boat-gc1d645525_1280.jpg" />
+                        </li>
+
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-5.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-4.jpg" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="product">
+                <h2 class="product__title">
+                  Sunseeker
+                  <span class="product__title--model">64 FT</span>
+                </h2>
+
+                <div class="product__info">
+                  <img class="product__brand-img" src="./img/sunseeker-logo-vector.png" alt="" />
+                  <ul class="meta product__meta">
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-group"></use>
+                      </svg>
+                      - <span class="meta__info-text">12</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-bed"></use>
+                      </svg>
+                      - <span class="meta__info-text">4</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-drink"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <p class="product__price">1300AED + VAT %</p>
+
+                <div class="product__buttons">
+                  <button class="button button--accent">Выбрать дату и зарезервировать</button>
+                  <a class="button" href="/post.html">Подробнее о яхте</a>
+                </div>
+                <p class="product__text">
+                  Барбекю, безалкогольные напитки, вода и лед, и еще какие-то важные моменты о яхте, небольшое описание
+                  основных достоинств и того что включено
+                </p>
+
+                <div class="product__slider">
+                  <div class="swiper product-slider__main">
+                    <ul class="swiper-wrapper">
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/post-slider-yacht-01.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/boat-gc1d645525_1280.jpg" />
+                      </li>
+
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-5.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-4.jpg" />
+                      </li>
+                    </ul>
+
+                    <div class="swiper product-slider__thumb">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/post-slider-yacht-01.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/boat-gc1d645525_1280.jpg" />
+                        </li>
+
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-5.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-4.jpg" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="product">
+                <h2 class="product__title">
+                  Sunseeker
+                  <span class="product__title--model">64 FT</span>
+                </h2>
+
+                <div class="product__info">
+                  <img class="product__brand-img" src="./img/sunseeker-logo-vector.png" alt="" />
+                  <ul class="meta product__meta">
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-group"></use>
+                      </svg>
+                      - <span class="meta__info-text">12</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-bed"></use>
+                      </svg>
+                      - <span class="meta__info-text">4</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-drink"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <p class="product__price">1300AED + VAT %</p>
+
+                <div class="product__buttons">
+                  <button class="button button--accent">Выбрать дату и зарезервировать</button>
+                  <a class="button" href="/post.html">Подробнее о яхте</a>
+                </div>
+                <p class="product__text">
+                  Барбекю, безалкогольные напитки, вода и лед, и еще какие-то важные моменты о яхте, небольшое описание
+                  основных достоинств и того что включено
+                </p>
+
+                <div class="product__slider">
+                  <div class="swiper product-slider__main">
+                    <ul class="swiper-wrapper">
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/post-slider-yacht-01.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/boat-gc1d645525_1280.jpg" />
+                      </li>
+
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-5.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-4.jpg" />
+                      </li>
+                    </ul>
+
+                    <div class="swiper product-slider__thumb">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/post-slider-yacht-01.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/boat-gc1d645525_1280.jpg" />
+                        </li>
+
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-5.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-4.jpg" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="product">
+                <h2 class="product__title">
+                  Sunseeker
+                  <span class="product__title--model">64 FT</span>
+                </h2>
+
+                <div class="product__info">
+                  <img class="product__brand-img" src="./img/sunseeker-logo-vector.png" alt="" />
+                  <ul class="meta product__meta">
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-group"></use>
+                      </svg>
+                      - <span class="meta__info-text">12</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-bed"></use>
+                      </svg>
+                      - <span class="meta__info-text">4</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-drink"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <p class="product__price">1300AED + VAT %</p>
+
+                <div class="product__buttons">
+                  <button class="button button--accent">Выбрать дату и зарезервировать</button>
+                  <a class="button" href="/post.html">Подробнее о яхте</a>
+                </div>
+                <p class="product__text">
+                  Барбекю, безалкогольные напитки, вода и лед, и еще какие-то важные моменты о яхте, небольшое описание
+                  основных достоинств и того что включено
+                </p>
+
+                <div class="product__slider">
+                  <div class="swiper product-slider__main">
+                    <ul class="swiper-wrapper">
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/post-slider-yacht-01.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/boat-gc1d645525_1280.jpg" />
+                      </li>
+
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-5.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-4.jpg" />
+                      </li>
+                    </ul>
+
+                    <div class="swiper product-slider__thumb">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/post-slider-yacht-01.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/boat-gc1d645525_1280.jpg" />
+                        </li>
+
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-5.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-4.jpg" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li class="catalog__item">
+              <div class="product">
+                <h2 class="product__title">
+                  Sunseeker
+                  <span class="product__title--model">64 FT</span>
+                </h2>
+
+                <div class="product__info">
+                  <img class="product__brand-img" src="./img/sunseeker-logo-vector.png" alt="" />
+                  <ul class="meta product__meta">
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-group"></use>
+                      </svg>
+                      - <span class="meta__info-text">12</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-bed"></use>
+                      </svg>
+                      - <span class="meta__info-text">4</span>
+                    </li>
+                    <li class="meta__info">
+                      <svg class="meta__icon">
+                        <use xlink:href="img\sprite.svg#icon-drink"></use>
+                      </svg>
+                    </li>
+                  </ul>
+                </div>
+                <p class="product__price">1300AED + VAT %</p>
+
+                <div class="product__buttons">
+                  <button class="button button--accent">Выбрать дату и зарезервировать</button>
+                  <a class="button" href="/post.html">Подробнее о яхте</a>
+                </div>
+                <p class="product__text">
+                  Барбекю, безалкогольные напитки, вода и лед, и еще какие-то важные моменты о яхте, небольшое описание
+                  основных достоинств и того что включено
+                </p>
+
+                <div class="product__slider">
+                  <div class="swiper product-slider__main">
+                    <ul class="swiper-wrapper">
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/post-slider-yacht-01.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/boat-gc1d645525_1280.jpg" />
+                      </li>
+
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-5.jpg" />
+                      </li>
+                      <li class="swiper-slide product__slide">
+                        <img src="/img/service-img-4.jpg" />
+                      </li>
+                    </ul>
+
+                    <div class="swiper product-slider__thumb">
+                      <ul class="swiper-wrapper">
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/post-slider-yacht-01.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/boat-gc1d645525_1280.jpg" />
+                        </li>
+
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-5.jpg" />
+                        </li>
+                        <li class="swiper-slide product__slide--thumb">
+                          <img src="/img/service-img-4.jpg" />
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <section class="add-service container" id="add-service">
+          <h2 class="main__title add-service__title">Дополнительные услуги</h2>
+
+          <article class="service add-service__content">
+            <div class="service__image">
+              <img class="add-service__img" src="./img/add-1.png" alt="img" />
+            </div>
+            <div class="service__content">
+              <h2 class="service__content-title">Профессиональный кейтеринг с шеф-поваром</h2>
+              <div class="service__content-text">
+                <p>
+                  Кейтеринг на яхте – это прекрасная альтернатива организации мероприятий в банкетных залах. Какой же
+                  праздник без банкета? Не волнуйтесь, наши кулинарные мастера порадуют Вас изысканными блюдами. Мы
+                  организуем любое меню, исходя из Ваших предпочтений и пожеланий! Это может быть званый ужин, шведский
+                  стол или фуршет. Или, может, Вы хотите устроить коктейльную вечеринку? Мы все устроим по высшему
+                  разряду! Наш персонал обеспечит Вам сервис высшего уровня и избавит Вас от хлопот!
+                </p>
+                <p>
+                  Зачем ждать случая? Соберите своих родных и знакомых на роскошной яхте! Проведите незабываемое время в
+                  кругу близких Вам людей и подарите счастье дорогим для Вас людям!
+                </p>
+              </div>
+              <button class="button">Получить консультацию</button>
+            </div>
+          </article>
+
+          <article class="service service--reverse add-service__content">
+            <div class="service__image">
+              <img class="add-service__img" src="./img/add-2.png" alt="img" />
+            </div>
+            <div class="service__content">
+              <h2 class="service__content-title">Мероприятия под ключ</h2>
+              <div class="service__content-text">
+                <p>
+                  Праздник украшает нашу жизнь, делает ее более светлой и яркой. Праздник дарит нам незабываемые
+                  мгновения радости и веселья. Праздник это то, что может превратить серые будни в нечто прекрасное и
+                  яркое.
+                </p>
+                <p>
+                  Вам надоели однообразные застолья, шумные ночные клубы и однотипные по своей сути кафе, Вы хотите
+                  нестандартно отметить день рождения или любой другой праздник? Хочется чего-то нового, свежего,
+                  оригинального и яркого?
+                </p>
+                <p>Мы предлагаем незабываемое путешествие на яхте в Дубае!</p>
+              </div>
+              <button class="button">Получить консультацию</button>
+            </div>
+          </article>
+
+          <article class="service add-service__content add-service__content--jet">
+            <div class="service__image">
+              <img class="add-service__img" src="./img/add-3.png" alt="img" />
+            </div>
+            <div class="service__content">
+              <h2 class="service__content-title">Private Jet</h2>
+              <div class="service__content-text">
+                <p>
+                  Бизнес авиация подразумевает самый высокий уровень обслуживания, комфорта и безопасности. Для перелета
+                  в Дубай доступно более 4000 бизнес джетов, всех типов. В основном они отличаются размером,
+                  вместительностью и скоростью перелета.
+                </p>
+                <p>
+                  Наши авиа консультанты помогут вам подобрать оптимальный самолет, исходя из ваших предпочтений и
+                  целей. Возможны комбинированные рейсы, где часть маршрута преодолевается на вертолете. Это особенно
+                  удобно, если вы хотите максимально быстро оказаться на яхте и не тратить время на дорогу. Мы берем на
+                  себя полную организацию перелета, под ключ.
+                </p>
+              </div>
+              <button class="button">Получить консультацию</button>
+            </div>
+          </article>
+
+          <article class="service service--reverse add-service__content">
+            <div class="service__image">
+              <img class="add-service__img" src="./img/add-4.png" alt="img" />
+            </div>
+            <div class="service__content">
+              <h2 class="service__content-title">Водные развлечения</h2>
+              <div class="service__content-text">
+                <p>
+                  Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет
+                  сделать текст более привлекательным и живым для визуально-слухового восприятия.
+                </p>
+                <p>
+                  По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
+                  людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском
+                  языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
+                </p>
+              </div>
+              <button class="button">Получить консультацию</button>
+            </div>
+          </article>
+        </section>
+
+        <section class="cost container">
+          <div class="cost__content">
+            <h2 class="title cost__title">Что включено в стоимость Аренды Элитной Яхты</h2>
+
+            <ul class="cost__list">
+              <li class="cost__list-item">Яхта со всеми удобствами и развлечениями.</li>
+              <li class="cost__list-item">Топливо. Судна подготовлены к поездке по маршруту к оговоренному времени.</li>
+              <li class="cost__list-item">Оборудование для комфортного отдыха – посуда, полотенца и пр.</li>
+              <li class="cost__list-item">
+                Экипаж. Профессиональная команда, состоящая из капитана, его помощника, стюардов.
+              </li>
+              <li class="cost__list-item">Приятные бонусы, которые прописаны в описании к каждой яхте.</li>
+
+              
+            </ul>
+            <a href="/yachts.html" class="button button--accent cost__content--btn">Выбрать яхту</a>
+          </div>
+          <div class="cost__image">
+            <img class="cost__image-img" src="./img/cost-img.png" alt="img" />
+          </div>
+        </section>
+      </div>
+    </main>
 
     <footer class="footer">
       <div class="footer__inner container">
@@ -94,7 +721,7 @@
             <svg class="phone__icon">
               <use xlink:href="img\sprite.svg#icon-phone"></use>
             </svg>
-            <a class="phone__text" href="tel:+123456789">+971 21 123 2234</a>
+            <a class="phone__text" href="tel:+123456789">+971 55 552 1519</a>
           </div>
 
           <div class="location">
@@ -108,6 +735,8 @@
       <p class="copy container">© 2022 GETMYACHT. Все права защищены.</p>
     </footer>
 
-    <script src="https://ajax.googleapis.com/ajax/libs/cesiumjs/1.78/Build/Cesium/Cesium.js"></script>
+    <script src="/js/libs/swiper.min.js"></script>
+
+    <script src="js/main.js"></script>
   </body>
 </html>

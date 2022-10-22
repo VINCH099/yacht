@@ -1,0 +1,661 @@
+<!DOCTYPE html>
+<html lang="ru" class="lock">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="/css/swiper.min.css" />
+
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div  id="pre">
+      <div class="pl">
+        <span class="pl__sr">Loading…</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__inner container">
+        <button class="menu__burger">
+          <i></i>
+        </button>
+
+        <a class="logo header__logo" href="/">
+          <img class="logo__img" src="./img/logo.png" alt="logo" />
+        </a>
+
+        <nav class="menu menu--mobile">
+          <a class="logo menu__logo mobile-only" href="/">
+            <img class="logo__img" src="./img/logo.png" alt="logo" />
+          </a>
+          <ul class="menu__list menu__list--mobile">
+            <li class="menu__item">
+              <a class="menu__link" href="/yachts.html">Наши яхты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="/services.html">Дополнительные услуги</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <button class="button menu__btn mobile-only">Получить консультацию</button>
+          <div class="lang-switcher mobile-only">
+            <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
+            <a class="lang-switcher__text" href="#">Switch to English</a>
+          </div>
+        </nav>
+
+        <i class="_overlay"></i>
+
+        <div class="lang-switcher desktop-only">
+          <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
+          <a class="lang-switcher__text" href="#">English</a>
+        </div>
+
+        <button class="button desktop-only">Получить консультацию</button>
+
+        <div class="phone header__phone--mobile">
+          <svg class="phone__icon">
+            <use xlink:href="img\sprite.svg#icon-phone"></use>
+          </svg>
+          <a class="phone__text" href="tel:+123456789">+971 55 552 1519</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="page-slider">
+        <div class="swiper slider-main">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <img class="slide" src="/img/post-slider-yacht-01.jpg" />
+            </li>
+            <li class="swiper-slide">
+              <img class="slide" src="/img/boat-gc1d645525_1280.jpg" />
+            </li>
+
+            <li class="swiper-slide">
+              <img class="slide" src="/img/service-img-5.jpg" />
+            </li>
+            <li class="swiper-slide">
+              <img class="slide" src="/img/service-img-4.jpg" />
+            </li>
+          </ul>
+          <div class="slider__pagination page-slider__controls">
+          <div class="swiper slider-main__thumb">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <img class="slide" src="/img/post-slider-yacht-01.jpg" />
+              </li>
+              <li class="swiper-slide">
+                <img class="slide" src="/img/boat-gc1d645525_1280.jpg" />
+              </li>
+
+              <li class="swiper-slide">
+                <img class="slide" src="/img/service-img-5.jpg" />
+              </li>
+              <li class="swiper-slide">
+                <img class="slide" src="/img/service-img-4.jpg" />
+              </li>
+            </ul>
+          </div>
+          <div class="page-slider__next"></div>
+          <div class="page-slider__prev"></div>
+        </div>
+        </div>
+
+        
+      </div>
+
+      <div class="post-inner">
+        <div class="container">
+          <div class="post__head">
+            <h1 class="main__title main__title--post">Аренда Benetti 164 в Дубае</h1>
+            <p class="main-price">1300AET + VAT %</p>
+          </div>
+
+          <div class="attributes">
+            <p class="attributes__capture"><b>Характеристики:</b></p>
+            <div class="attributes__box">
+              <div class="feautures">
+                <table class="feautures__table">
+                  <tbody>
+                    <tr>
+                      <td class="feautures__label">Производитель:</td>
+                      <td class="feautures__data">Испания</td>
+                    </tr>
+                    <tr>
+                      <td class="feautures__label">Скорость:</td>
+                      <td class="feautures__data">22</td>
+                    </tr>
+                    <tr>
+                      <td class="feautures__label">Количество кают:</td>
+                      <td class="feautures__data">5</td>
+                    </tr>
+                  </tbody>
+                </table>
+
+                <table class="feautures__table">
+                  <tbody>
+                    <tr>
+                      <td class="feautures__label">Длина:</td>
+                      <td class="feautures__data">50</td>
+                    </tr>
+                    <tr>
+                      <td class="feautures__label">Ширина:</td>
+                      <td class="feautures__data">8</td>
+                    </tr>
+                    <tr>
+                      <td class="feautures__label">Пассажировместимость:</td>
+                      <td class="feautures__data">20</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <div class="brand">
+                <img class="brand__img" src="/img/sunseeker-logo-vector.png" alt="img" />
+              </div>
+              <button class="button button--accent">Выбрать дату и зарезервировать</button>
+            </div>
+            <div class="description">
+              <p class="attributes__capture"><b>Описание:</b></p>
+              <div class="description__box">
+                <p>
+                  С 1873 года Benetti находится на пике производства яхт в Италии. Теперь они входят в число лучших в
+                  мире, построив более 350 различных яхт. Даже спустя 144 года они по-прежнему создают одни из лучших
+                  кораблей. Benetti B именно такой. Благодаря производственным мощностям Benneti, оснащенным самыми
+                  передовыми технологиями, Benetti B - единственный в своем роде корабль, предлагающий роскошные и
+                  первоклассные впечатления. Первоначально Benetti B был построен в 2008 году, но недавно был
+                  отремонтирован в 2012 году, что позволило провести любые необходимые обновления для оптимизации вашего
+                  опыта плавания.
+                </p>
+                <p>
+                  Аренда яхты Benetti — идеальный вариант для компании, здесь люксовый люкс от потолка до самого дна.
+                  Она отличается высокой степенью надежности, ровным бесшумным ходом. Подходит как искушенным
+                  мореплавателям, так и новичкам. Каждое судно этой известной верфи является олицетворением испанского
+                  стиля, элегантности и статуса.
+                </p>
+                <p>
+                  Яхта не разочарует ценителей прекрасного и изящного, а также любителей отдохнуть с максимальным
+                  комфортом, ведь Benetti 164 — это гораздо больше, чем просто дорогая игрушка или обязательный атрибут
+                  «удавшейся жизни».
+                </p>
+                <p>
+                  Тех, кто любит свободу и независимость, кто не жалеет средств на себя и берет от жизни всё! Побалуйте
+                  себя и своих близких или друзей, а можно всех сразу — арендуйте Benetti 164 в Дубае.
+                </p>
+              </div>
+            </div>
+            <div class="include">
+              <p class="attributes__capture"><b>Что включено:</b></p>
+
+              <ul class="include__list">
+                <li class="include__list-item">
+                  <div class="include-card">
+                    <img class="include-card__img" src="./img/service-img-3.jpg" alt="" />
+                    <p class="include-card-text">
+                      Benetti B имеет пять просторных комнат, в которых могут разместиться в общей сложности 12 человек.
+                      Это оптимальное количество гостей на ночь, которое подойдет большим семьям, которые хотят
+                      сблизиться, или вашим близким друзьям, которые присоединятся к вам на вечеринке.
+                    </p>
+                  </div>
+                </li>
+                <li class="include__list-item">
+                  <div class="include-card">
+                    <img class="include-card__img" src="./img/include-2.png" alt="" />
+                    <p class="include-card-text">
+                      Обязательно примите все, что Benetti Bhas может предложить вам, с великолепной обеденной зоной,
+                      которая находится под красивой люстрой, которая гарантированно произведет впечатление на любого,
+                      кого вы приведете на борт.
+                    </p>
+                  </div>
+                </li>
+                <li class="include__list-item">
+                  <div class="include-card">
+                    <img class="include-card__img" src="./img/include-3.png" alt="" />
+                    <p class="include-card-text">
+                      У флайбриджа есть бар с мокрыми напитками, который идеально подходит для общения и развлечения
+                      ваших гостей.
+                    </p>
+                  </div>
+                </li>
+                <li class="include__list-item">
+                  <div class="include-card">
+                    <img class="include-card__img" src="./img/include-1.png" alt="" />
+                    <p class="include-card-text">
+                      Benetti B имеет пять просторных комнат, в которых могут разместиться в общей сложности 12 человек.
+                      Это оптимальное количество гостей на ночь, которое подойдет большим семьям, которые хотят
+                      сблизиться, или вашим близким друзьям, которые присоединятся к вам на вечеринке.
+                    </p>
+                  </div>
+                </li>
+                <li class="include__list-item">
+                  <div class="include-card">
+                    <img class="include-card__img" src="./img/include-2.png" alt="" />
+                    <p class="include-card-text">
+                      Benetti B имеет пять просторных комнат, в которых могут разместиться в общей сложности 12 человек.
+                      Это оптимальное количество гостей на ночь, которое подойдет большим семьям, которые хотят
+                      сблизиться, или вашим близким друзьям, которые присоединятся к вам на вечеринке.
+                    </p>
+                  </div>
+                </li>
+                <li class="include__list-item">
+                  <div class="include-card">
+                    <img class="include-card__img" src="./img/include-3.png" alt="" />
+                    <p class="include-card-text">
+                      Benetti B имеет пять просторных комнат, в которых могут разместиться в общей сложности 12 человек.
+                      Это оптимальное количество гостей на ночь, которое подойдет большим семьям, которые хотят
+                      сблизиться, или вашим близким друзьям, которые присоединятся к вам на вечеринке.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="post-form">
+        <div class="container">
+          <h2 class="post-form__title">Забронировать яхту - 164FT Benetti</h2>
+          <form class="form__rent" method="post">
+            <div class="form-rent__data">
+              <fieldset class="form-rent__time">
+                <legend class="form-rent__time-legend">Выберите дату:</legend>
+                <div class="select-wrapper">
+                  <select class="form-rent__select" name="day" id="">
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="2">4</option>
+                    <option value="3">5</option>
+                    <option value="4">6</option>
+                    <option value="5">7</option>
+                    <option value="6">8</option>
+                    <option value="7">9</option>
+                    <option value="8">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="12">13</option>
+                    <option value="12">14</option>
+                    <option value="12">15</option>
+                    <option value="12">16</option>
+                    <option value="12">17</option>
+                    <option value="12">18</option>
+                    <option value="12">19</option>
+                    <option value="12">20</option>
+                    <option value="12">21</option>
+                    <option value="12">22</option>
+                    <option value="12">23</option>
+                    <option value="12">24</option>
+                    <option value="12">25</option>
+                    <option value="12">26</option>
+                    <option value="12">27</option>
+                    <option value="12">28</option>
+                    <option value="12">29</option>
+                    <option value="12">30</option>
+                    <option value="12">31</option>
+                  </select>
+                </div>
+
+                <div class="select-wrapper">
+                  <select class="form-rent__select" name="month" id="">
+                    <option value="1">Январь</option>
+                    <option value="2">Февраль</option>
+                    <option value="3">Март</option>
+                    <option value="4">Апрель</option>
+                    <option value="5">Май</option>
+                    <option value="6">Июнь</option>
+                    <option value="7">Июль</option>
+                    <option value="8">Август</option>
+                    <option value="9">Сентябрь</option>
+                    <option value="10">Октябрь</option>
+                    <option value="11">Ноябрь</option>
+                    <option value="12">Декабрь</option>
+                  </select>
+                </div>
+
+                <div class="select-wrapper">
+                  <select class="form-rent__select" name="year" id="">
+                    <option value="1">2022</option>
+                    <option value="2">2023</option>
+                    <option value="3">2024</option>
+                    <option value="4">2025</option>
+                    <option value="5">2026</option>
+                    <option value="6">2027</option>
+                    <option value="7">2028</option>
+                    <option value="8">2029</option>
+                  </select>
+                </div>
+              </fieldset>
+
+              <label>
+                Введите ваше имя:
+                <input type="text" name="name" required />
+              </label>
+
+              <label>
+                Введите ваш телефон:
+                <input type="tel" name="phone" required />
+              </label>
+            </div>
+            <div class="form-rent__message">
+              <label>
+                Особые пожелания:
+                <textarea name="message" rows="10" id=""></textarea>
+              </label>
+              <button class="button button--accent form-rent--btn" type="submit">Забронировать сейчас</button>
+            </div>
+          </form>
+        </div>
+      </div>
+      <div class="related container">
+        <h2 class="related__title">Похожие яхты</h2>
+
+        <div class="related-slider">
+          <div class="swiper related-slider__main">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <a href="#" class="card">
+                  <div class="card__image">
+                    <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="title card__title">
+                      Sunseeker
+                      <span class="card__title--model">64 FT</span>
+                    </h3>
+
+                    <ul class="meta card__meta">
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-group"></use>
+                        </svg>
+                        - <span class="meta__info-text">12</span>
+                      </li>
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-bed"></use>
+                        </svg>
+                        - <span class="meta__info-text">4</span>
+                      </li>
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-drink"></use>
+                        </svg>
+                      </li>
+                    </ul>
+
+                    <p class="card__price">1300AED + VAT %</p>
+                    <span class="button button--accent button__card">Подробнее о яхте</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#" class="card">
+                  <div class="card__image">
+                    <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="title card__title">
+                      Sunseeker
+                      <span class="card__title--model">64 FT</span>
+                    </h3>
+
+                    <ul class="meta card__meta">
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-group"></use>
+                        </svg>
+                        - <span class="meta__info-text">12</span>
+                      </li>
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-bed"></use>
+                        </svg>
+                        - <span class="meta__info-text">4</span>
+                      </li>
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-drink"></use>
+                        </svg>
+                      </li>
+                    </ul>
+
+                    <p class="card__price">1300AED + VAT %</p>
+                    <span class="button button--accent button__card">Подробнее о яхте</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#" class="card">
+                  <div class="card__image">
+                    <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="title card__title">
+                      Sunseeker
+                      <span class="card__title--model">64 FT</span>
+                    </h3>
+
+                    <ul class="meta card__meta">
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-group"></use>
+                        </svg>
+                        - <span class="meta__info-text">12</span>
+                      </li>
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-bed"></use>
+                        </svg>
+                        - <span class="meta__info-text">4</span>
+                      </li>
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-drink"></use>
+                        </svg>
+                      </li>
+                    </ul>
+
+                    <p class="card__price">1300AED + VAT %</p>
+                    <span class="button button--accent button__card">Подробнее о яхте</span>
+                  </div>
+                </a>
+              </li>
+
+              <li class="swiper-slide">
+                <a href="#" class="card">
+                  <div class="card__image">
+                    <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
+                  </div>
+                  <div class="card__content">
+                    <h3 class="title card__title">
+                      Sunseeker
+                      <span class="card__title--model">64 FT</span>
+                    </h3>
+
+                    <ul class="meta card__meta">
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-group"></use>
+                        </svg>
+                        - <span class="meta__info-text">12</span>
+                      </li>
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-bed"></use>
+                        </svg>
+                        - <span class="meta__info-text">4</span>
+                      </li>
+                      <li class="meta__info">
+                        <svg class="meta__icon">
+                          <use xlink:href="img\sprite.svg#icon-drink"></use>
+                        </svg>
+                      </li>
+                    </ul>
+
+                    <p class="card__price">1300AED + VAT %</p>
+                    <span class="button button--accent button__card">Подробнее о яхте</span>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="related-slider__nav">
+            <div class="related-slider__next"></div>
+            <div class="related-slider__prev"></div>
+          </div>
+        </div>
+      </div>
+
+      <section class="add-service container">
+        <h2 class="main__title add-service__title">Дополнительные услуги</h2>
+
+        <article class="service add-service__content">
+          <div class="service__image">
+            <img class="add-service__img" src="./img/add-1.png" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Профессиональный кейтеринг с шеф-поваром</h2>
+            <div class="service__content-text">
+              <p>
+                Кейтеринг на яхте – это прекрасная альтернатива организации мероприятий в банкетных залах. Какой же
+                праздник без банкета? Не волнуйтесь, наши кулинарные мастера порадуют Вас изысканными блюдами. Мы
+                организуем любое меню, исходя из Ваших предпочтений и пожеланий! Это может быть званый ужин, шведский
+                стол или фуршет. Или, может, Вы хотите устроить коктейльную вечеринку? Мы все устроим по высшему
+                разряду! Наш персонал обеспечит Вам сервис высшего уровня и избавит Вас от хлопот!
+              </p>
+              <p>
+                Зачем ждать случая? Соберите своих родных и знакомых на роскошной яхте! Проведите незабываемое время в
+                кругу близких Вам людей и подарите счастье дорогим для Вас людям!
+              </p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+
+        <article class="service service--reverse add-service__content">
+          <div class="service__image">
+            <img class="add-service__img" src="./img/add-2.png" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Мероприятия под ключ</h2>
+            <div class="service__content-text">
+              <p>
+                Праздник украшает нашу жизнь, делает ее более светлой и яркой. Праздник дарит нам незабываемые мгновения
+                радости и веселья. Праздник это то, что может превратить серые будни в нечто прекрасное и яркое.
+              </p>
+              <p>
+                Вам надоели однообразные застолья, шумные ночные клубы и однотипные по своей сути кафе, Вы хотите
+                нестандартно отметить день рождения или любой другой праздник? Хочется чего-то нового, свежего,
+                оригинального и яркого?
+              </p>
+              <p>Мы предлагаем незабываемое путешествие на яхте в Дубае!</p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+
+        <article class="service add-service__content add-service__content--jet">
+          <div class="service__image">
+            <img class="add-service__img" src="./img/add-3.png" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Private Jet</h2>
+            <div class="service__content-text">
+              <p>
+                Бизнес авиация подразумевает самый высокий уровень обслуживания, комфорта и безопасности. Для перелета в
+                Дубай доступно более 4000 бизнес джетов, всех типов. В основном они отличаются размером,
+                вместительностью и скоростью перелета.
+              </p>
+              <p>
+                Наши авиа консультанты помогут вам подобрать оптимальный самолет, исходя из ваших предпочтений и целей.
+                Возможны комбинированные рейсы, где часть маршрута преодолевается на вертолете. Это особенно удобно,
+                если вы хотите максимально быстро оказаться на яхте и не тратить время на дорогу. Мы берем на себя
+                полную организацию перелета, под ключ.
+              </p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+
+        <article class="service service--reverse add-service__content">
+          <div class="service__image">
+            <img class="add-service__img" src="./img/add-4.png" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Водные развлечения</h2>
+            <div class="service__content-text">
+              <p>
+                Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет
+                сделать текст более привлекательным и живым для визуально-слухового восприятия.
+              </p>
+              <p>
+                По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
+                людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском
+                языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
+              </p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner container">
+        <a class="logo footer__logo" href="#">
+          <img class="logo__img" src="./img/logo.png" alt="logo" />
+        </a>
+
+        <nav class="menu footer__menu">
+          <ul class="menu__list footer__menu-list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Наши яхты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Дополнительные услуги</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="button footer__btn">Получить консультацию</button>
+
+        <address class="contacts footer__contacts">
+          <div class="phone">
+            <svg class="phone__icon">
+              <use xlink:href="img\sprite.svg#icon-phone"></use>
+            </svg>
+            <a class="phone__text" href="tel:+123456789">+971 55 552 1519</a>
+          </div>
+
+          <div class="location">
+            <svg class="location__icon">
+              <use xlink:href="img\sprite.svg#icon-location"></use>
+            </svg>
+            <p class="location__text">Dubai, Dubai Marina</p>
+          </div>
+        </address>
+      </div>
+      <p class="copy container">© 2022 GETMYACHT. Все права защищены.</p>
+    </footer>
+  <script src="/js/libs/swiper.min.js"></script>
+
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>

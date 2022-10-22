@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="ru" class="lock">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+
+  <body>
+    <div  id="pre">
+      <div class="pl">
+        <span class="pl__sr">Loading…</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__inner container">
+        <button class="menu__burger">
+          <i></i>
+        </button>
+
+        <a class="logo header__logo" href="/">
+          <img class="logo__img" src="./img/logo.png" alt="logo" />
+        </a>
+
+        <nav class="menu menu--mobile">
+          <a class="logo menu__logo mobile-only" href="/">
+            <img class="logo__img" src="./img/logo.png" alt="logo" />
+          </a>
+          <ul class="menu__list menu__list--mobile">
+            <li class="menu__item">
+              <a class="menu__link" href="/yachts.html">Наши яхты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--current" href="/services.html">Дополнительные услуги</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+          <button class="button menu__btn mobile-only">Получить консультацию</button>
+          <div class="lang-switcher mobile-only">
+            <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
+            <a class="lang-switcher__text" href="#">Switch to English</a>
+          </div>
+        </nav>
+
+        <i class="_overlay"></i>
+
+        <div class="lang-switcher desktop-only">
+          <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
+          <a class="lang-switcher__text" href="#">English</a>
+        </div>
+
+        <button class="button desktop-only">Получить консультацию</button>
+
+        <div class="phone header__phone--mobile">
+          <svg class="phone__icon">
+            <use xlink:href="img\sprite.svg#icon-phone"></use>
+          </svg>
+          <a class="phone__text" href="tel:+123456789">+971 55 552 1519</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__inner main__inner--services container">
+        <h1 class="main__title main__title--services">Дополнительные услуги</h1>
+
+        <article class="service">
+          <div class="service__image">
+            <img class="service__image-img" src="./img/service-img-1.jpg" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Профессиональный кейтеринг с шеф-поваром</h2>
+            <div class="service__content-text">
+              <p>
+                Кейтеринг на яхте – это прекрасная альтернатива организации мероприятий в банкетных залах. Какой же
+                праздник без банкета? Не волнуйтесь, наши кулинарные мастера порадуют Вас изысканными блюдами. Мы
+                организуем любое меню, исходя из Ваших предпочтений и пожеланий! Это может быть званый ужин, шведский
+                стол или фуршет. Или, может, Вы хотите устроить коктейльную вечеринку? Мы все устроим по высшему
+                разряду! Наш персонал обеспечит Вам сервис высшего уровня и избавит Вас от хлопот!
+              </p>
+              <p>
+                Зачем ждать случая? Соберите своих родных и знакомых на роскошной яхте! Проведите незабываемое время в
+                кругу близких Вам людей и подарите счастье дорогим для Вас людям!
+              </p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+
+        <article class="service">
+          <div class="service__image">
+            <img class="service__image-img" src="./img/service-img-2.jpg" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Private Jet</h2>
+            <div class="service__content-text">
+              <p>
+                Бизнес авиация подразумевает самый высокий уровень обслуживания, комфорта и безопасности. Для перелета в
+                Дубай доступно более 4000 бизнес джетов, всех типов. В основном они отличаются размером,
+                вместительностью и скоростью перелета.
+              </p>
+              <p>
+                Наши авиа консультанты помогут вам подобрать оптимальный самолет, исходя из ваших предпочтений и целей.
+                Возможны комбинированные рейсы, где часть маршрута преодолевается на вертолете. Это особенно удобно,
+                если вы хотите максимально быстро оказаться на яхте и не тратить время на дорогу. Мы берем на себя
+                полную организацию перелета, под ключ.
+              </p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+
+        <article class="service">
+          <div class="service__image">
+            <img class="service__image-img" src="./img/service-img-3.jpg" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Мероприятия под ключ</h2>
+            <div class="service__content-text">
+              <p>
+                Праздник украшает нашу жизнь, делает ее более светлой и яркой. Праздник дарит нам незабываемые мгновения
+                радости и веселья. Праздник это то, что может превратить серые будни в нечто прекрасное и яркое.
+              </p>
+              <p>
+                Вам надоели однообразные застолья, шумные ночные клубы и однотипные по своей сути кафе, Вы хотите
+                нестандартно отметить день рождения или любой другой праздник? Хочется чего-то нового, свежего,
+                оригинального и яркого?
+              </p>
+              <p>Мы предлагаем незабываемое путешествие на яхте в Дубае!</p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+
+        <article class="service">
+          <div class="service__image">
+            <img class="service__image-img" src="./img/service-img-4.jpg" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Jet Sky</h2>
+            <div class="service__content-text">
+              <p>
+                Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет
+                сделать текст более привлекательным и живым для визуально-слухового восприятия.
+              </p>
+              <p>
+                По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
+                людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском
+                языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
+              </p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+
+        <article class="service">
+          <div class="service__image">
+            <img class="service__image-img" src="./img/service-img-5.jpg" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">Fly Board</h2>
+            <div class="service__content-text">
+              <p>Развлекайтесь на флайборде в Дубае, изучайте трюки и наслаждайтесь свежим воздухом сверху.</p>
+              <p>
+                Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет
+                сделать текст более привлекательным и живым для визуально-слухового восприятия.
+              </p>
+              <p>
+                По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
+                людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском
+                языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
+              </p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+
+        <article class="service">
+          <div class="service__image">
+            <img class="service__image-img" src="./img/service-img-6.jpg" alt="img" />
+          </div>
+          <div class="service__content">
+            <h2 class="service__content-title">E Foils</h2>
+            <div class="service__content-text">
+              <p>Текст генерируется абзацами случайным образом от двух до десяти предложений в абзаце, что позволяет</p>
+              <p>
+                По своей сути рыбатекст является альтернативой традиционному lorem ipsum, который вызывает у некторых
+                людей недоумение при попытках прочитать рыбу текст. В отличии от lorem ipsum, текст рыба на русском
+                языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
+              </p>
+            </div>
+            <button class="button">Получить консультацию</button>
+          </div>
+        </article>
+      </div>
+    </main>
+    <footer class="footer">
+      <div class="footer__inner container">
+        <a class="logo footer__logo" href="#">
+          <img class="logo__img" src="./img/logo.png" alt="logo" />
+        </a>
+
+        <nav class="menu footer__menu">
+          <ul class="menu__list footer__menu-list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Наши яхты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Дополнительные услуги</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="button footer__btn">Получить консультацию</button>
+
+        <address class="contacts footer__contacts">
+          <div class="phone">
+            <svg class="phone__icon">
+              <use xlink:href="img\sprite.svg#icon-phone"></use>
+            </svg>
+            <a class="phone__text" href="tel:+123456789">+971 55 552 1519</a>
+          </div>
+
+          <div class="location">
+            <svg class="location__icon">
+              <use xlink:href="img\sprite.svg#icon-location"></use>
+            </svg>
+            <p class="location__text">Dubai, Dubai Marina</p>
+          </div>
+        </address>
+      </div>
+      <p class="copy container">© 2022 GETMYACHT. Все права защищены.</p>
+    </footer>
+       <script src="/js/libs/swiper.min.js"></script>
+
+    <script src="js/main.js"></script>
+    
+  </body>
+</html>
