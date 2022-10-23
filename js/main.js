@@ -148,7 +148,14 @@ const sliderProductHome = document.querySelectorAll('.product-slider__main')
     let productSliderThumb = new Swiper(el.querySelector('.product-slider__thumb'), {
       loop: true,
       spaceBetween: 5,
-      slidesPerView: 6,
+      slidesPerView: 3,
+      breakpoints: {
+        
+        960: {
+          slidesPerView: 6,
+          spaceBetween: 5,
+        },
+      },
       watchSlidesProgress: true,
     })
     let productSlider = new Swiper(el, {
@@ -158,3 +165,31 @@ const sliderProductHome = document.querySelectorAll('.product-slider__main')
       },
     })
   })
+
+
+  // REVIEWS SLIDER
+
+  const reviewsSliderHome = document.querySelector('.reviews-slider')
+
+
+if (reviewsSliderHome) {
+  let reviewsSlider = new Swiper(reviewsSliderHome, {
+    slidesPerView: 1,
+    loop: true,
+    spaceBetween: 30,
+    autoHeight: true,
+    autoplay: {
+      delay: 3000,
+    },
+    pagination: {
+      el: '.reviews-slider__pagination',
+      type: 'fraction',
+    },
+
+    navigation: {
+      nextEl: '.reviews-slider__next',
+      prevEl: '.reviews-slider__prev',
+    },
+  })
+}
+  
