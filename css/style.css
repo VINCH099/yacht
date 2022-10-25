@@ -28,7 +28,7 @@ html {
 }
 
 html.lock {
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 
 html::-webkit-scrollbar {
