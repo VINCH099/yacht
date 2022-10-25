@@ -19,7 +19,7 @@
 
 html {
   box-sizing: border-box;
-/*   overflow-x: hidden; */
+  overflow-x: clip;
 
   /* Scrolbar */
   scrollbar-width: 10px;
