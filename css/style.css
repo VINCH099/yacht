@@ -1340,7 +1340,7 @@ textarea {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   padding: 20px;
-  overflow-y: auto;
+  overflow-y: scroll;
 }
 
 .modal__inner {
