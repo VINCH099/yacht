@@ -19,7 +19,7 @@
 
 html {
   box-sizing: border-box;
-  overflow-x: clip;
+  overflow-x: hidden;
 
   /* Scrolbar */
   scrollbar-width: 10px;
@@ -28,7 +28,7 @@ html {
 }
 
 html.lock {
-/*   overflow: hidden; */
+  overflow: hidden;
 }
 
 html::-webkit-scrollbar {
