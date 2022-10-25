@@ -12,10 +12,9 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/style.css" />
-    
   </head>
   <body>
-    <div  id="pre">
+    <div id="pre">
       <div class="pl">
         <span class="pl__sr">Loading…</span>
       </div>
@@ -45,7 +44,9 @@
               <a class="menu__link" href="#">Контакты</a>
             </li>
           </ul>
-          <button class="button menu__btn mobile-only">Получить консультацию</button>
+          <button class="button menu__btn mobile-only _modal-open" data-modal-open="modal-consult">
+            Получить консультацию
+          </button>
           <div class="lang-switcher mobile-only">
             <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
             <a class="lang-switcher__text" href="#">Switch to English</a>
@@ -59,7 +60,7 @@
           <a class="lang-switcher__text" href="#">English</a>
         </div>
 
-        <button class="button desktop-only">Получить консультацию</button>
+        <button class="button desktop-only _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
 
         <div class="phone header__phone--mobile">
           <svg class="phone__icon">
@@ -71,7 +72,6 @@
     </header>
 
     <main class="main">
-      
       <div class="main__inner--yachts container">
         <div class="yachts__head">
           <h1 class="main__title main__title--yachts">Все наши яхты</h1>
@@ -399,7 +399,7 @@
           </ul>
         </nav>
 
-        <button class="button footer__btn">Получить консультацию</button>
+        <button class="button footer__btn _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
 
         <address class="contacts footer__contacts">
           <div class="phone">
@@ -419,9 +419,48 @@
       </div>
       <p class="copy container">© 2022 GETMYACHT. Все права защищены.</p>
     </footer>
-      <script src="./js/libs/swiper.min.js"></script>
+
+    <!-- MODAL -->
+
+    <div class="modal" data-modal-name="modal-consult">
+      <div class="modal__overlay">
+        <div class="modal__inner">
+          <button class="modal__close">
+            <svg class="icon-close">
+              <use xlink:href="img\sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <div class="modal-consult">
+            <div class="modal-consult__form">
+              <h2 class="title modal-consult__title">
+                <svg class="icon-consult"><use xlink:href="img\sprite.svg#icon-consult"></use></svg>
+                - Получить консультацию
+              </h2>
+
+              <form class="form-consult form-consult--modal" method="post">
+                <div class="form-consult__data form-consult__data--modal">
+                  <label class="form-consult__input">
+                    Введите ваше имя:
+                    <input type="text" name="name" required />
+                  </label>
+
+                  <label class="form-consult__input">
+                    Введите ваш телефон:
+                    <input type="tel" name="phone" required />
+                  </label>
+                </div>
+
+                <button class="button button--accent form-consult--btn" type="submit">Получить консультацию</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/libs/swiper.min.js"></script>
 
     <script src="./js/main.js"></script>
-    
   </body>
 </html>

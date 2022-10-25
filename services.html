@@ -45,7 +45,7 @@
               <a class="menu__link" href="#">Контакты</a>
             </li>
           </ul>
-          <button class="button menu__btn mobile-only">Получить консультацию</button>
+          <button class="button menu__btn mobile-only _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
           <div class="lang-switcher mobile-only">
             <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
             <a class="lang-switcher__text" href="#">Switch to English</a>
@@ -59,7 +59,7 @@
           <a class="lang-switcher__text" href="#">English</a>
         </div>
 
-        <button class="button desktop-only">Получить консультацию</button>
+        <button class="button desktop-only _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
 
         <div class="phone header__phone--mobile">
           <svg class="phone__icon">
@@ -93,7 +93,7 @@
                 кругу близких Вам людей и подарите счастье дорогим для Вас людям!
               </p>
             </div>
-            <button class="button">Получить консультацию</button>
+            <button class="button _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
           </div>
         </article>
 
@@ -116,7 +116,7 @@
                 полную организацию перелета, под ключ.
               </p>
             </div>
-            <button class="button">Получить консультацию</button>
+            <button class="button _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
           </div>
         </article>
 
@@ -138,7 +138,7 @@
               </p>
               <p>Мы предлагаем незабываемое путешествие на яхте в Дубае!</p>
             </div>
-            <button class="button">Получить консультацию</button>
+            <button class="button _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
           </div>
         </article>
 
@@ -159,7 +159,7 @@
                 языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
               </p>
             </div>
-            <button class="button">Получить консультацию</button>
+            <button class="button _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
           </div>
         </article>
 
@@ -181,7 +181,7 @@
                 языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
               </p>
             </div>
-            <button class="button">Получить консультацию</button>
+            <button class="button _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
           </div>
         </article>
 
@@ -199,7 +199,7 @@
                 языке наполнит любой макет непонятным смыслом и придаст неповторимый колорит советских времен.
               </p>
             </div>
-            <button class="button">Получить консультацию</button>
+            <button class="button _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
           </div>
         </article>
       </div>
@@ -224,7 +224,7 @@
           </ul>
         </nav>
 
-        <button class="button footer__btn">Получить консультацию</button>
+        <button class="button footer__btn _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
 
         <address class="contacts footer__contacts">
           <div class="phone">
@@ -244,6 +244,45 @@
       </div>
       <p class="copy container">© 2022 GETMYACHT. Все права защищены.</p>
     </footer>
+
+    <!-- MODAL -->
+
+    <div class="modal" data-modal-name="modal-consult">
+      <div class="modal__overlay">
+        <div class="modal__inner">
+          <button class="modal__close">
+            <svg class="icon-close">
+              <use xlink:href="img\sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <div class="modal-consult">
+            <div class="modal-consult__form">
+              <h2 class="title modal-consult__title">
+                <svg class="icon-consult"><use xlink:href="img\sprite.svg#icon-consult"></use></svg>
+                - Получить консультацию
+              </h2>
+
+              <form class="form-consult form-consult--modal" method="post">
+                <div class="form-consult__data form-consult__data--modal">
+                  <label class="form-consult__input">
+                    Введите ваше имя:
+                    <input type="text" name="name" required />
+                  </label>
+
+                  <label class="form-consult__input">
+                    Введите ваш телефон:
+                    <input type="tel" name="phone" required />
+                  </label>
+                </div>
+
+                <button class="button button--accent form-consult--btn" type="submit">Получить консультацию</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
        <script src="./js/libs/swiper.min.js"></script>
 
     <script src="./js/main.js"></script>

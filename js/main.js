@@ -4,16 +4,16 @@ const logo = document.querySelector('.logo')
 const lock = document.querySelector('.lock')
 const overlay = document.querySelector('._overlay')
 
-const filtersBtn = document?.querySelector('.button-sort')
-const filters = document?.querySelector('.filters')
+const filtersBtn = document.querySelector('.button-sort')
+const filters = document.querySelector('.filters')
 
 const body = document.querySelector('html')
 
+const preloader = document.getElementById('pre')
 
-if (document.getElementById('pre')) {
-  window.onload = function () {
-    const preloader = document.getElementById('pre')
-    body.classList.remove('lock')
+window.onload = function () {
+  body.classList.remove('lock')
+  if (preloader) {
     preloader.style.display = 'none'
   }
 }
@@ -27,7 +27,7 @@ if (menu && burger) {
   })
 }
 
-overlay.addEventListener('click', (e) => {
+overlay?.addEventListener('click', (e) => {
   if (e.target.classList.contains('menu--visible')) {
     menu.classList.remove('menu--visible')
     burger.classList.remove('menu--visible')
@@ -37,7 +37,7 @@ overlay.addEventListener('click', (e) => {
   }
 })
 
-menu.querySelectorAll('.menu a').forEach((link) => {
+menu?.querySelectorAll('.menu a').forEach((link) => {
   link.addEventListener('click', () => {
     if (menu.classList.contains('menu--visible')) {
       menu.classList.remove('menu--visible')
@@ -48,7 +48,7 @@ menu.querySelectorAll('.menu a').forEach((link) => {
   })
 })
 
-menu.querySelectorAll('button').forEach((button) => {
+menu?.querySelectorAll('button').forEach((button) => {
   button.addEventListener('click', () => {
     if (menu.classList.contains('menu--visible')) {
       menu.classList.remove('menu--visible')
@@ -143,34 +143,30 @@ if (relatedSlider) {
 
 const sliderProductHome = document.querySelectorAll('.product-slider__main')
 
-
-  sliderProductHome?.forEach((el) => {
-    let productSliderThumb = new Swiper(el.querySelector('.product-slider__thumb'), {
-      loop: true,
-      spaceBetween: 5,
-      slidesPerView: 3,
-      breakpoints: {
-        
-        960: {
-          slidesPerView: 6,
-          spaceBetween: 5,
-        },
+sliderProductHome?.forEach((el) => {
+  let productSliderThumb = new Swiper(el.querySelector('.product-slider__thumb'), {
+    loop: true,
+    spaceBetween: 5,
+    slidesPerView: 3,
+    breakpoints: {
+      960: {
+        slidesPerView: 6,
+        spaceBetween: 5,
       },
-      watchSlidesProgress: true,
-    })
-    let productSlider = new Swiper(el, {
-      loop: true,
-      thumbs: {
-        swiper: productSliderThumb,
-      },
-    })
+    },
+    watchSlidesProgress: true,
   })
+  let productSlider = new Swiper(el, {
+    loop: true,
+    thumbs: {
+      swiper: productSliderThumb,
+    },
+  })
+})
 
+// REVIEWS SLIDER
 
-  // REVIEWS SLIDER
-
-  const reviewsSliderHome = document.querySelector('.reviews-slider')
-
+const reviewsSliderHome = document.querySelector('.reviews-slider')
 
 if (reviewsSliderHome) {
   let reviewsSlider = new Swiper(reviewsSliderHome, {
@@ -192,4 +188,59 @@ if (reviewsSliderHome) {
     },
   })
 }
-  
+
+// MODAL SLIDER
+
+const modalSliderBook = document.querySelector('.book-yacht__slider')
+
+if (modalSliderBook) {
+  let modalSlider = new Swiper(modalSliderBook, {
+    slidesPerView: 1,
+    loop: true,
+    autoplay: {
+      delay: 1500,
+    },
+  })
+}
+
+// MODALS
+
+const modalBtns = document.querySelectorAll('._modal-open')
+const modals = document.querySelectorAll('.modal')
+
+function openModal(el) {
+  el.classList.add('_active')
+}
+
+function closeModal(e) {
+  if (
+    e.target.classList.contains('modal__close') ||
+    e.target.closest('.modal__close') ||
+    e.target.classList.contains('modal__overlay')
+  ) {
+    e.target.closest('.modal').classList.remove('_active')
+     body.classList.remove('lock')
+    
+}}
+
+modalBtns.forEach((btn) => {
+  btn.addEventListener('click', (e) => {
+    let data = e.target.dataset.modalOpen
+
+    console.log(e.target.dataset.modalOpen)
+
+    modals.forEach((modal) => {
+      if (
+        modal.dataset.modalName === data ||
+        modal.dataset.modalName === e.target.closest('._modal-open').dataset.modalOpen
+      ) {
+        openModal(modal)
+        body.classList.add('lock')
+      }
+    })
+  })
+})
+
+modals.forEach((modal) => {
+  modal.addEventListener('click', (e) => closeModal(e))
+})
