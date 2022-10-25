@@ -1038,14 +1038,14 @@ textarea {
   background-image: url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center center;
-  aspect-ratio: 1.5;
+  background-position: center bottom;
+  height: 100vh;
 }
 
 .home-inner {
   position: static;
   margin-bottom: 200px;
-  margin-top: -200px;
+  margin-top: -300px;
 }
 
 .hero__content {
