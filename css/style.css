@@ -28,7 +28,7 @@ html {
 }
 
 html.lock {
-/*   overflow: hidden; */
+  overflow: hidden;
 }
 
 html::-webkit-scrollbar {
@@ -70,7 +70,7 @@ body {
   background-color: var(--light-color);
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
-  overflow-x: clip;
+  overflow-x: hidden;
 }
 
 .container {
@@ -1340,7 +1340,7 @@ textarea {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   padding: 20px;
-  overflow-y: scroll;
+  overflow-y:scroll;
 }
 
 .modal__inner {
@@ -1481,18 +1481,15 @@ textarea {
 .modal-consult::before {
   content: '';
   position: absolute;
-    right: 20%;
-    top: 0;
-    width: 150px;
-    height: 190px;
-    background-image: url(../img/anchor-img.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    transform: translateY(-30%);
-
- 
+  right: 20%;
+  top: 0;
+  width: 150px;
+  height: 190px;
+  background-image: url(../img/anchor-img.png);
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: translateY(-30%);
 }
-
 
 .modal-consult__title {
   position: relative;
@@ -1613,8 +1610,8 @@ textarea {
   }
 
   .modal-consult::after {
-  transform: translate(0, 30%);
-}
+    transform: translate(0, 30%);
+  }
 }
 
 /* =============| 960 |============= */
@@ -1687,7 +1684,7 @@ textarea {
     justify-self: auto;
   }
 
-   .modal-book {
+  .modal-book {
     flex-direction: column;
   }
 
@@ -1714,8 +1711,8 @@ textarea {
   }
 
   .modal-consult__title {
-  font-size: 28px;
-}
+    font-size: 28px;
+  }
 
   .modal-consult::before {
     right: 10%;
@@ -1773,7 +1770,6 @@ textarea {
   .modal-consult {
     padding: 50px;
   }
-
 }
 
 /* =============| 680 |============= */
@@ -1796,10 +1792,10 @@ textarea {
   }
 
   .modal-consult__title {
-  font-size: 22px;
-}
+    font-size: 22px;
+  }
 
-    .modal-consult::before {
+  .modal-consult::before {
     display: none;
   }
 }
