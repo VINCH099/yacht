@@ -14,12 +14,12 @@
   width: 100vw;
   background-color: var(--light-color);
   z-index: 999;
-/*   overflow: hidden; */
+  overflow: hidden;
 }
 
 html {
   box-sizing: border-box;
-  overflow-x: hidden;
+/*   overflow-x: hidden; */
 
   /* Scrolbar */
   scrollbar-width: 10px;
