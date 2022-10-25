@@ -70,7 +70,7 @@ body {
   background-color: var(--light-color);
   font-family: 'Roboto Condensed', sans-serif;
   font-size: 16px;
-  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 .container {
