@@ -14,7 +14,7 @@
   width: 100vw;
   background-color: var(--light-color);
   z-index: 999;
-  overflow: hidden;
+/*   overflow: hidden; */
 }
 
 html {
@@ -1340,7 +1340,7 @@ textarea {
   background-color: rgba(0, 0, 0, 0.7);
   display: flex;
   padding: 20px;
-  overflow: auto;
+/*   overflow: auto; */
 }
 
 .modal__inner {
