@@ -1051,7 +1051,9 @@ textarea {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center bottom;
-  aspect-ratio: 1.6;
+  width: 100%;
+  aspect-ratio: 1.2;
+  max-height: 100vh;
 }
 
 .home-inner {
