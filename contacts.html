@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="ru" class="lock">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&family=Roboto:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+
+  <body>
+    <div id="pre">
+      <div class="pl">
+        <span class="pl__sr">Loading…</span>
+      </div>
+    </div>
+    <header class="header">
+      <div class="header__inner container">
+        <button class="menu__burger">
+          <i></i>
+        </button>
+
+        <a class="logo header__logo" href="./">
+          <img class="logo__img" src="./img/logo.png" alt="logo" />
+        </a>
+
+        <nav class="menu menu--mobile">
+          <a class="logo menu__logo mobile-only" href="./">
+            <img class="logo__img" src="./img/logo.png" alt="logo" />
+          </a>
+          <ul class="menu__list menu__list--mobile">
+            <li class="menu__item">
+              <a class="menu__link" href="./yachts.html">Наши яхты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="./services.html">Дополнительные услуги</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link menu__link--current" href="#">Контакты</a>
+            </li>
+          </ul>
+          <button class="button menu__btn mobile-only _modal-open" data-modal-open="modal-consult">
+            Получить консультацию
+          </button>
+          <div class="lang-switcher mobile-only">
+            <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
+            <a class="lang-switcher__text" href="#">Switch to English</a>
+          </div>
+        </nav>
+
+        <i class="_overlay"></i>
+
+        <div class="lang-switcher desktop-only">
+          <img class="lang-switcher__flag" src="./img/flag-en.svg" alt="" />
+          <a class="lang-switcher__text" href="#">English</a>
+        </div>
+
+        <button class="button desktop-only _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
+
+        <div class="phone header__phone--mobile">
+          <svg class="phone__icon">
+            <use xlink:href="img\sprite.svg#icon-phone"></use>
+          </svg>
+          <a class="phone__text" href="tel:+123456789">+971 55 552 1519</a>
+        </div>
+      </div>
+    </header>
+
+    <main class="main">
+      <div class="main__inner main__inner--contacts container">
+        <h1 class="title main__title contacts__title">Контакты</h1>
+
+
+
+
+
+        <div class="contacts__box">
+
+        <div class="contact-phone">
+          <div class="phone">
+            <svg class="phone__icon">
+              <use xlink:href="img\sprite.svg#icon-phone"></use>
+            </svg>
+            <a class="phone__text" href="tel:+971555521519">+971 55 552 1519</a>
+          </div>
+
+          <a href="#" class="contacts__phone-links">
+            <img class="contacts__phone-img" src="./img/icon-telegram.svg" alt="telegram" />
+          </a>
+          <a href="#" class="contacts__phone-links">
+            <img class="contacts__phone-img" src="./img/icon-viber.svg" alt="viber" />
+          </a>
+        </div>
+
+
+        
+        <div class="contact-address">
+          <div class="location">
+            <svg class="location__icon">
+              <use xlink:href="img\sprite.svg#icon-location"></use>
+            </svg>
+            <a href="#" class="location__text">Dubai, Dubai Marina</a>
+          </div>
+
+          <div class="email">
+            <svg class="email__icon">
+              <use xlink:href="img\sprite.svg#icon-email"></use>
+            </svg>
+            <a href="mailto:info@getmyacht.com" class="location__text">info@getmyacht.com</a>
+          </div>
+        </div>
+
+        </div>
+
+
+
+
+
+        <div class="contacts-form">
+          <h2 class="post-form__title">Написать нам</h2>
+          <form class="form-rent" method="post">
+            <div class="form-rent__data contacts-form__data">
+              <label>
+                Введите ваше имя:
+                <input type="text" name="name" required />
+              </label>
+
+              <label>
+                Введите ваш телефон:
+                <input type="tel" name="phone" required />
+              </label>
+            </div>
+            <div class="form-rent__message">
+              <label>
+                Особые пожелания:
+                <textarea name="message" rows="8" id=""></textarea>
+              </label>
+
+              <button class="button button--accent contacts-form--btn" type="submit">Отправить</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <div class="footer__inner container">
+        <a class="logo footer__logo" href="#">
+          <img class="logo__img" src="./img/logo.png" alt="logo" />
+        </a>
+
+        <nav class="menu footer__menu">
+          <ul class="menu__list footer__menu-list">
+            <li class="menu__item">
+              <a class="menu__link" href="#">Наши яхты</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Дополнительные услуги</a>
+            </li>
+            <li class="menu__item">
+              <a class="menu__link" href="#">Контакты</a>
+            </li>
+          </ul>
+        </nav>
+
+        <button class="button footer__btn _modal-open" data-modal-open="modal-consult">Получить консультацию</button>
+
+        <address class="contacts footer__contacts">
+          <div class="phone">
+            <svg class="phone__icon">
+              <use xlink:href="img\sprite.svg#icon-phone"></use>
+            </svg>
+            <a class="phone__text" href="tel:+123456789">+971 55 552 1519</a>
+          </div>
+
+          <div class="location">
+            <svg class="location__icon">
+              <use xlink:href="img\sprite.svg#icon-location"></use>
+            </svg>
+            <p class="location__text">Dubai, Dubai Marina</p>
+          </div>
+        </address>
+      </div>
+      <p class="copy container">© 2022 GETMYACHT. Все права защищены.</p>
+    </footer>
+
+    <!-- MODAL -->
+
+    <div class="modal" data-modal-name="modal-consult">
+      <div class="modal__overlay">
+        <div class="modal__inner">
+          <button class="modal__close">
+            <svg class="icon-close">
+              <use xlink:href="img\sprite.svg#icon-close"></use>
+            </svg>
+          </button>
+
+          <div class="modal-consult">
+            <div class="modal-consult__form">
+              <h2 class="title modal-consult__title">
+                <svg class="icon-consult"><use xlink:href="img\sprite.svg#icon-consult"></use></svg>
+                - Получить консультацию
+              </h2>
+
+              <form class="form-consult form-consult--modal" method="post">
+                <div class="form-consult__data form-consult__data--modal">
+                  <label class="form-consult__input">
+                    Введите ваше имя:
+                    <input type="text" name="name" required />
+                  </label>
+
+                  <label class="form-consult__input">
+                    Введите ваш телефон:
+                    <input type="tel" name="phone" required />
+                  </label>
+                </div>
+
+                <button class="button button--accent form-consult--btn" type="submit">Получить консультацию</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./js/main.js"></script>
+  </body>
+</html>

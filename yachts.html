@@ -41,7 +41,7 @@
               <a class="menu__link" href="./services.html">Дополнительные услуги</a>
             </li>
             <li class="menu__item">
-              <a class="menu__link" href="#">Контакты</a>
+              <a class="menu__link" href="./contacts.html">Контакты</a>
             </li>
           </ul>
           <button class="button menu__btn mobile-only _modal-open" data-modal-open="modal-consult">
@@ -83,7 +83,7 @@
             Сортировка
           </button>
         </div>
-        <div class="filters yachts__filters">
+        <form class="filters yachts__filters">
           <span class="filters__mobile-title mobile-only">
             <svg class="filters__mobile-icon">
               <use xlink:href="img\sprite.svg#icon-sort"></use>
@@ -97,11 +97,10 @@
           <label>
             Сортировка
             <div class="select-wrapper">
-              <select name="popularity" id="">
-                <option value="1">По популярности</option>
-                <option value="2">По рейтингу</option>
-                <option value="3">По возрастанию цены</option>
-                <option value="4">По убыванию цены</option>
+              <select name="price" class="control control-sort">
+                <option value="random">По популярности</option>
+                <option value="price:asc size:asc">По возрастанию цены</option>
+                <option value="price:desc size:desc">По убыванию цены</option>
               </select>
             </div>
           </label>
@@ -109,10 +108,10 @@
           <label>
             Размер яхты
             <div class="select-wrapper">
-              <select name="size" id="">
-                <option value="1">Все размеры</option>
-                <option value="2">Сначала маленькие</option>
-                <option value="3">Сначала большие</option>
+              <select name="size" class="control control-sort">
+                <option value="default:asc">Все размеры</option>
+                <option value="size:asc price:asc ">Сначала маленькие</option>
+                <option value="size:desc price:desc">Сначала большие</option>
               </select>
             </div>
           </label>
@@ -120,13 +119,13 @@
           <label>
             Кол-во кают
             <div class="select-wrapper">
-              <select name="cabin" id="">
-                <option value="1">Все</option>
-                <option value="2">4</option>
-                <option value="3">5</option>
-                <option value="4">6</option>
-                <option value="5">7</option>
-                <option value="6">8</option>
+              <select name="cabin" data-filter-group>
+                <option value=".mix">Все</option>
+                <option value=".cabin-4">4</option>
+                <option value=".cabin-5">5</option>
+                <option value=".cabin-6">6</option>
+                <option value=".cabin-7">7</option>
+                <option value=".cabin-8">8</option>
               </select>
             </div>
           </label>
@@ -134,31 +133,26 @@
           <label>
             Кол-во людей
             <div class="select-wrapper">
-              <select name="people" id="">
-                <option value="1">1 - 12</option>
-                <option value="2">1</option>
-                <option value="2">2</option>
-                <option value="2">3</option>
-                <option value="2">4</option>
-                <option value="3">5</option>
-                <option value="4">6</option>
-                <option value="5">7</option>
-                <option value="6">8</option>
-                <option value="7">8</option>
-                <option value="8">8</option>
-                <option value="9">8</option>
-                <option value="10">8</option>
-                <option value="11">11</option>
-                <option value="12">12</option>
+              <select name="people" data-filter-group>
+                <option value=".mix">Все</option>
+                <option value=".small">1 - 12</option>
+                <option value=".medium">12 - 30</option>
+                <option value=".large">30+</option>
               </select>
             </div>
           </label>
 
-          <button class="button mobile-only filters__mobile--btn">Показать</button>
-        </div>
+          <button type="submit" class="button mobile-only filters__mobile--btn">Показать</button>
+        </form>
 
-        <ul class="yacht-list">
-          <li class="yacht-list__item">
+        <ul class="yacht-list _yacht-filter">
+          <li
+            class="yacht-list__item mix cabin-4 small"
+            data-price="13000"
+            data-size="1"
+            data-cabin="4"
+            data-people="1"
+          >
             <a href="./post.html" class="card">
               <div class="card__image">
                 <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
@@ -189,13 +183,13 @@
                   </li>
                 </ul>
 
-                <p class="card__price">1300AED + VAT %</p>
+                <p class="card__price">13000AED + VAT %</p>
                 <span class="button button--accent button__card">Подробнее о яхте</span>
               </div>
             </a>
           </li>
 
-          <li class="yacht-list__item">
+          <li class="yacht-list__item mix cabin-4 medium" data-price="13000" data-size="2">
             <a href="./post.html" class="card">
               <div class="card__image">
                 <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
@@ -211,7 +205,7 @@
                     <svg class="meta__icon">
                       <use xlink:href="img\sprite.svg#icon-group"></use>
                     </svg>
-                    - <span class="meta__info-text">12</span>
+                    - <span class="meta__info-text">18</span>
                   </li>
                   <li class="meta__info">
                     <svg class="meta__icon">
@@ -226,12 +220,12 @@
                   </li>
                 </ul>
 
-                <p class="card__price">1300AED + VAT %</p>
+                <p class="card__price">13000AED + VAT %</p>
                 <span class="button button--accent button__card">Подробнее о яхте</span>
               </div>
             </a>
           </li>
-          <li class="yacht-list__item">
+          <li class="yacht-list__item mix cabin-5 small" data-price="14000" data-size="1">
             <a href="./post.html" class="card">
               <div class="card__image">
                 <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
@@ -262,12 +256,12 @@
                   </li>
                 </ul>
 
-                <p class="card__price">1300AED + VAT %</p>
+                <p class="card__price">14000AED + VAT %</p>
                 <span class="button button--accent button__card">Подробнее о яхте</span>
               </div>
             </a>
           </li>
-          <li class="yacht-list__item">
+          <li class="yacht-list__item mix cabin-6 large" data-price="17000" data-size="3">
             <a href="./post.html" class="card">
               <div class="card__image">
                 <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
@@ -283,7 +277,7 @@
                     <svg class="meta__icon">
                       <use xlink:href="img\sprite.svg#icon-group"></use>
                     </svg>
-                    - <span class="meta__info-text">12</span>
+                    - <span class="meta__info-text">22</span>
                   </li>
                   <li class="meta__info">
                     <svg class="meta__icon">
@@ -298,12 +292,12 @@
                   </li>
                 </ul>
 
-                <p class="card__price">1300AED + VAT %</p>
+                <p class="card__price">17000AED + VAT %</p>
                 <span class="button button--accent button__card">Подробнее о яхте</span>
               </div>
             </a>
           </li>
-          <li class="yacht-list__item">
+          <li class="yacht-list__item mix cabin-7 large" data-price="15000" data-size="2">
             <a href="./post.html" class="card">
               <div class="card__image">
                 <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
@@ -319,7 +313,7 @@
                     <svg class="meta__icon">
                       <use xlink:href="img\sprite.svg#icon-group"></use>
                     </svg>
-                    - <span class="meta__info-text">12</span>
+                    - <span class="meta__info-text">18</span>
                   </li>
                   <li class="meta__info">
                     <svg class="meta__icon">
@@ -334,12 +328,12 @@
                   </li>
                 </ul>
 
-                <p class="card__price">1300AED + VAT %</p>
+                <p class="card__price">15000AED + VAT %</p>
                 <span class="button button--accent button__card">Подробнее о яхте</span>
               </div>
             </a>
           </li>
-          <li class="yacht-list__item">
+          <li class="yacht-list__item mix cabin-8 large" data-price="18000" data-size="3">
             <a href="./post.html" class="card">
               <div class="card__image">
                 <img class="card__image--img" src="./img/yacht-card-img--1.jpg" alt="img" />
@@ -355,7 +349,7 @@
                     <svg class="meta__icon">
                       <use xlink:href="img\sprite.svg#icon-group"></use>
                     </svg>
-                    - <span class="meta__info-text">12</span>
+                    - <span class="meta__info-text">22</span>
                   </li>
                   <li class="meta__info">
                     <svg class="meta__icon">
@@ -370,7 +364,7 @@
                   </li>
                 </ul>
 
-                <p class="card__price">1300AED + VAT %</p>
+                <p class="card__price">18000AED + VAT %</p>
                 <span class="button button--accent button__card">Подробнее о яхте</span>
               </div>
             </a>
@@ -460,6 +454,8 @@
     </div>
 
     <script src="./js/libs/swiper.min.js"></script>
+    <script src="./js/libs/mixitup.min.js"></script>
+    <script src="./js/libs/multifilter.min.js"></script>
 
     <script src="./js/main.js"></script>
   </body>

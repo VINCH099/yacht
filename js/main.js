@@ -219,9 +219,9 @@ function closeModal(e) {
     e.target.classList.contains('modal__overlay')
   ) {
     e.target.closest('.modal').classList.remove('_active')
-     body.classList.remove('lock')
-    
-}}
+    body.classList.remove('lock')
+  }
+}
 
 modalBtns.forEach((btn) => {
   btn.addEventListener('click', (e) => {
@@ -244,3 +244,46 @@ modalBtns.forEach((btn) => {
 modals.forEach((modal) => {
   modal.addEventListener('click', (e) => closeModal(e))
 })
+
+// FILTERS
+
+const container = document.querySelector('._yacht-filter')
+
+const sortSize = document.querySelector('select[name="size"]')
+const sortPrice = document.querySelector('select[name="price"]')
+
+const filterBtn = document.querySelector('.filters__mobile--btn')
+
+const screenWidth = document.documentElement.scrollWidth
+
+if (screenWidth < 1100) {
+  yachtFilter = mixitup('._yacht-filter', {
+    multifilter: {
+      enable: true,
+      parseOn: 'submit',
+    },
+  })
+
+  filterBtn.addEventListener('click', () => {
+    yachtFilter.sort(sortSize.value)
+    yachtFilter.sort(sortPrice.value)
+
+  })
+  
+} else {
+  let yachtFilter = mixitup('._yacht-filter', {
+    multifilter: {
+      enable: true,
+    },
+  })
+
+  sortSize.addEventListener('change', (e) => {
+    yachtFilter.sort(e.target.value)
+  })
+
+  sortPrice.addEventListener('change', (e) => {
+    yachtFilter.sort(e.target.value)
+  })
+
+}
+
