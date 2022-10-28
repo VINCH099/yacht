@@ -247,43 +247,44 @@ modals.forEach((modal) => {
 
 // FILTERS
 
-const container = document.querySelector('._yacht-filter')
+const yachtFilterContainer = document.querySelector('._yacht-filter')
 
-const sortSize = document.querySelector('select[name="size"]')
-const sortPrice = document.querySelector('select[name="price"]')
+if (yachtFilterContainer) {
+  const sortSize = document.querySelector('select[name="size"]')
+  const sortPrice = document.querySelector('select[name="price"]')
 
-const filterBtn = document.querySelector('.filters__mobile--btn')
+  const filterBtn = document.querySelector('.filters__mobile--btn')
 
-const screenWidth = document.documentElement.scrollWidth
+  const screenWidth = document.documentElement.scrollWidth
 
-if (screenWidth < 1100) {
-  yachtFilter = mixitup('._yacht-filter', {
-    multifilter: {
-      enable: true,
-      parseOn: 'submit',
-    },
-  })
+  if (screenWidth < 1100) {
+    yachtFilter = mixitup(yachtFilterContainer, {
+      multifilter: {
+        enable: true,
+        parseOn: 'submit',
+      },
+    })
 
-  filterBtn.addEventListener('click', () => {
-    yachtFilter.sort(sortSize.value)
-    yachtFilter.sort(sortPrice.value)
+    filterBtn.addEventListener('click', () => {
+      yachtFilter.sort(sortSize.value)
+      yachtFilter.sort(sortPrice.value)
+    })
+  } else {
+    let yachtFilter = mixitup(yachtFilterContainer, {
+      multifilter: {
+        enable: true,
+      },
+    })
 
-  })
-  
-} else {
-  let yachtFilter = mixitup('._yacht-filter', {
-    multifilter: {
-      enable: true,
-    },
-  })
+    sortSize.onchange = (e) => {
+      yachtFilter.sort(e.target.value)
+    }
 
-  sortSize.addEventListener('change', (e) => {
-    yachtFilter.sort(e.target.value)
-  })
-
-  sortPrice.addEventListener('change', (e) => {
-    yachtFilter.sort(e.target.value)
-  })
-
+    sortPrice.onchange = (e) => {
+      yachtFilter.sort(e.target.value)
+    }
+  }
 }
 
+
+// HOME FILTERS
