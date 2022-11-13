@@ -252,30 +252,25 @@ const yachtFilterContainer = document.querySelector('._yacht-filter')
 if (yachtFilterContainer) {
   const sortSize = document.querySelector('select[name="size"]')
   const sortPrice = document.querySelector('select[name="price"]')
+  const filterCabin = document.querySelector('select[name="cabin"]')
 
   const filterBtn = document.querySelector('.filters__mobile--btn')
 
   const screenWidth = document.documentElement.scrollWidth
 
-  if (screenWidth < 1100) {
-    yachtFilter = mixitup(yachtFilterContainer, {
-      multifilter: {
-        enable: true,
-        parseOn: 'submit',
-      },
-    })
+  let yachtFilter = mixitup(yachtFilterContainer, {
+    multifilter: {
+      enable: true,
+      parseOn: screenWidth < 1100 ? 'submit' : 'change',
+    },
+  })
 
-    filterBtn.addEventListener('click', () => {
-      yachtFilter.sort(sortSize.value)
-      yachtFilter.sort(sortPrice.value)
-    })
-  } else {
-    let yachtFilter = mixitup(yachtFilterContainer, {
-      multifilter: {
-        enable: true,
-      },
-    })
+  filterBtn.addEventListener('click', () => {
+    yachtFilter.sort(sortSize.value)
+    yachtFilter.sort(sortPrice.value)
+  })
 
+  if (screenWidth > 1100) {
     sortSize.onchange = (e) => {
       yachtFilter.sort(e.target.value)
     }
@@ -285,6 +280,3 @@ if (yachtFilterContainer) {
     }
   }
 }
-
-
-// HOME FILTERS

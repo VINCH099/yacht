@@ -472,6 +472,11 @@ a {
   flex-wrap: wrap;
 }
 
+.add-service > .service:nth-child(odd) {
+      flex-direction: row-reverse;
+}
+
+
 .service__image {
   flex: 1;
   display: flex;
@@ -654,9 +659,7 @@ input {
   font-weight: 700;
   background: var(--light-color);
   border: 1px solid #bbbbbb;
-  cursor: pointer;
 }
-
 
 .select-wrapper {
   position: relative;
@@ -1027,9 +1030,9 @@ textarea {
   padding-bottom: 150px;
 }
 
-.service--reverse {
+/* .service--reverse {
   flex-direction: row-reverse;
-}
+} */
 
 .add-service__content {
   align-items: center;
