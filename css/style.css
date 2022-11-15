@@ -1061,7 +1061,7 @@ textarea {
   background-image: url(../img/hero.jpg);
   background-repeat: no-repeat;
   background-size: cover;
-  background-position: center bottom;
+  background-position: center;
   width: 100%;
   aspect-ratio: 1.2;
   max-height: 100vh;
